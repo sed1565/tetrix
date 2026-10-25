@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tetrix</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <aside class="panel left">
+      <h1>TETRIX</h1>
+      <section>
+        <h2>Hold</h2>
+        <canvas id="hold" width="96" height="96"></canvas>
+      </section>
+      <section class="stats">
+        <div><span>Score</span><b id="score">0</b></div>
+        <div><span>Best</span><b id="best">0</b></div>
+        <div><span>Level</span><b id="level">1</b></div>
+        <div><span>Lines</span><b id="lines">0</b></div>
+      </section>
+    </aside>
+
+    <div class="board-wrap">
+      <canvas id="board" width="300" height="600"></canvas>
+      <div id="overlay" class="overlay">
+        <h2 id="overlay-title">TETRIX</h2>
+        <p id="overlay-text">Press Enter or tap to start</p>
+      </div>
+    </div>
+
+    <aside class="panel right">
+      <section>
+        <h2>Next</h2>
+        <canvas id="next" width="96" height="288"></canvas>
+      </section>
+      <section class="help">
+        <h2>Controls</h2>
+        <ul>
+          <li><kbd>←</kbd><kbd>→</kbd> Move</li>
+          <li><kbd>↓</kbd> Soft drop</li>
+          <li><kbd>Space</kbd> Hard drop</li>
+          <li><kbd>↑</kbd><kbd>X</kbd> Rotate CW</li>
+          <li><kbd>Z</kbd> Rotate CCW</li>
+          <li><kbd>C</kbd><kbd>Shift</kbd> Hold</li>
+          <li><kbd>P</kbd><kbd>Esc</kbd> Pause</li>
+        </ul>
+      </section>
+    </aside>
+  </main>
+
+  <div class="touch" aria-hidden="true">
+    <button data-act="left">◀</button>
+    <button data-act="rotate">⟳</button>
+    <button data-act="right">▶</button>
+    <button data-act="hold">Hold</button>
+    <button data-act="soft">▼</button>
+    <button data-act="hard">⤓</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
